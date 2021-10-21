@@ -1,16 +1,19 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity()
-export class Base {
+export class Student {
   @PrimaryGeneratedColumn('uuid')
   id: string;
-  
+
   @Column({ default: false })
   isPublished: boolean;
-  
+
   @Column()
   created: Date;
-  
+
   @Column()
   updated: Date;
+
+  @Column()
+  name: string;
 }
